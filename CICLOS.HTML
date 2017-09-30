@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CICLOS</title>
+	<script type="text/javascript">
+alert("no funciona");
+
+var c, ca, b;
+
+function calcular()
+{
+	//alert("funciona calcularr");
+	//alert(ca.value);
+	var numero = Number(ca.value);
+	var calculo = 1;
+	var n = 1;
+	while(n <= numero)
+	{
+		calculo = calculo * n;
+		n++;
+	}
+
+	c.innerHTML = calculo;
+
+}
+
+function inicio()
+{
+	c = document.getElementById("caja");
+	ca = document.getElementById("casilla");
+	b = document.getElementById("boton");
+
+//añade una funcion que va escuchar cuando el evento se dispare(cuando se hace clic)
+b.addEventListener("click", calcular)
+
+//	var numeros = 1;
+//	var residuo;
+//	while(numeros <= 50)
+//	{
+//		residuo = numeros % 2;
+//		if(residuo == 0) //quiere decir par+++
+//		{
+//			c.innerHTML += " " + numeros;
+//		}
+//		numeros++;
+//	}
+
+
+//NUMEROS PARES DENTRO DE LA CAJA DE 1 A 10(MOD)
+	//var numero = 115;
+	//var residuo;
+	//residuo = numero % 2;
+	//c.innerHTML = residuo;
+
+
+
+//EJEMPLO 1 DE ITERACION 
+	//var gritos = 10;
+	//while(gritos > 0)
+	//{
+		//c.innerHTML += "a";
+		//gritos = gritos - 1;
+	//}
+	//c.innerHTML +="S";
+}
+
+//cada vez que un ciclo ocurre se llama ITERACION//
+	</script>
+
+</head>
+<body>
+	<input type="text" id="casilla"/>
+	<input type="button" id="boton" value = "calcular"/>
+	<div id="caja">HOLA</div>
+	<div>COMO ESTAS</div>
+	<script type="text/javascript">
+	inicio();
+	</script>
+
+</body>
+</html>
